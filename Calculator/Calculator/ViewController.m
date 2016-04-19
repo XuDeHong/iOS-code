@@ -107,15 +107,15 @@
 -(IBAction)pressDigit:(UIButton *)sender
 {
     int digit=(int)sender.tag;
-    if((currentNum!=0||digit!=0||theOp!=0)&&isDecimal==NO)
-    {
-        currentNum=currentNum*10+digit;
-    }
-    else if(isDecimal==YES)
-    {
-        tag*=10;
-        currentNum=currentNum+digit/tag;
-    }
+//    if((currentNum!=0||digit!=0||theOp!=0)&&isDecimal==NO)
+//    {
+//        currentNum=currentNum*10+digit;
+//    }
+//    else if(isDecimal==YES)
+//    {
+//        tag*=10;
+//        currentNum=currentNum+digit/tag;
+//    }
     [displayString appendString:[NSString stringWithFormat:@"%i",digit]];
     [self displayResult];
 }
