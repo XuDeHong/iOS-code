@@ -7,21 +7,64 @@
 //
 
 #import "TableViewController.h"
+#import "DataModel.h"
+#import "CustomCell.h"
 
 @interface TableViewController ()
 
 @end
 
 @implementation TableViewController
+{
+    NSMutableArray *dataArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self initData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)initData //初始化数据
+{
+    dataArray = [NSMutableArray arrayWithCapacity:20];
+    
+    NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:@"1.jpg",@"profileImage", @"XuDeHong",@"userName",@"Hello!",@"talkContent",@"today",@"lastTime",nil];
+    DataModel *dataModel = [DataModel dataModelWithDictionary:data];
+    
+    [dataArray addObject:dataModel];
+    
+    data = [NSDictionary dictionaryWithObjectsAndKeys:@"2.jpg",@"profileImage", @"XuDeHong",@"userName",@"Hello!",@"talkContent",@"today",@"lastTime",nil];
+    dataModel = [DataModel dataModelWithDictionary:data];
+    [dataArray addObject:dataModel];
+    
+    data = [NSDictionary dictionaryWithObjectsAndKeys:@"3.jpg",@"profileImage", @"XuDeHong",@"userName",@"Hello!",@"talkContent",@"today",@"lastTime",nil];
+    dataModel = [DataModel dataModelWithDictionary:data];
+    [dataArray addObject:dataModel];
+    
+    data = [NSDictionary dictionaryWithObjectsAndKeys:@"4.jpg",@"profileImage", @"XuDeHong",@"userName",@"Hello!",@"talkContent",@"today",@"lastTime",nil];
+    dataModel = [DataModel dataModelWithDictionary:data];
+    [dataArray addObject:dataModel];
+    
+    data = [NSDictionary dictionaryWithObjectsAndKeys:@"5.jpg",@"profileImage", @"XuDeHong",@"userName",@"Hello!",@"talkContent",@"today",@"lastTime",nil];
+    dataModel = [DataModel dataModelWithDictionary:data];
+    [dataArray addObject:dataModel];
+    
+    data = [NSDictionary dictionaryWithObjectsAndKeys:@"6.jpg",@"profileImage", @"XuDeHong",@"userName",@"Hello!",@"talkContent",@"today",@"lastTime",nil];
+    dataModel = [DataModel dataModelWithDictionary:data];
+    [dataArray addObject:dataModel];
+    
+    data = [NSDictionary dictionaryWithObjectsAndKeys:@"7.jpg",@"profileImage", @"XuDeHong",@"userName",@"Hello!",@"talkContent",@"today",@"lastTime",nil];
+    dataModel = [DataModel dataModelWithDictionary:data];
+    [dataArray addObject:dataModel];
+    
+    data = [NSDictionary dictionaryWithObjectsAndKeys:@"8.jpg",@"profileImage", @"XuDeHong",@"userName",@"Hello!",@"talkContent",@"today",@"lastTime",nil];
+    dataModel = [DataModel dataModelWithDictionary:data];
+    [dataArray addObject:dataModel];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,24 +75,39 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return dataArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"CustomCell"; //CustomCell的XIB文件定义的Reuse Identifier
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(cell == nil)
+    {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"CustomCell" owner:self options:nil]lastObject];    //通过XIB文件加载cell
+    }
+    DataModel *data = dataArray[indexPath.row];
+    
+    cell.profileImage.image =[UIImage imageNamed:data.profileImage];
+    cell.userName.text = data.userName;
+    cell.talkContent.text = data.talkContent;
+    cell.lastTime.text = data.lastTime;
+    
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    return 54;
+}
+
 
 /*
 // Override to support conditional editing of the table view.

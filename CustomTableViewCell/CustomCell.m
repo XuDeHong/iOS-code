@@ -21,4 +21,12 @@
     // Configure the view for the selected state
 }
 
+-(id)init
+{
+    if((self = [super init]))
+    {
+    }
+    return self;
+}
+
 @end
