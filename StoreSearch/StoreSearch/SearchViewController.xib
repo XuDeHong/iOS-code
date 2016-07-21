@@ -7,14 +7,41 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
             <connections>
+                <outlet property="searchBar" destination="XdY-ZQ-PLD" id="AAZ-tq-pfT"/>
+                <outlet property="tableView" destination="1cp-w4-lzB" id="zA5-DB-YeR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1cp-w4-lzB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Vbx-Lm-PTs"/>
+                        <outlet property="delegate" destination="-1" id="7yZ-Gh-Zd2"/>
+                    </connections>
+                </tableView>
+                <searchBar contentMode="redraw" fixedFrame="YES" placeholder="App name, artist, song, album, ebook" translatesAutoresizingMaskIntoConstraints="NO" id="XdY-ZQ-PLD">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="2v8-gL-tZi"/>
+                    </connections>
+                </searchBar>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1cp-w4-lzB" secondAttribute="bottom" id="BQm-LC-hha"/>
+                <constraint firstItem="1cp-w4-lzB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JB9-Nu-A6T"/>
+                <constraint firstItem="1cp-w4-lzB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oOf-jA-qXX"/>
+                <constraint firstAttribute="trailing" secondItem="1cp-w4-lzB" secondAttribute="trailing" id="xG7-rf-7aI"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="23.5" y="22.5"/>
         </view>
     </objects>
 </document>
