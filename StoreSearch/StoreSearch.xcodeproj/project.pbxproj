@@ -16,6 +16,9 @@
 		8411C3451D3F5A80003FC684 /* StoreSearchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411C3441D3F5A80003FC684 /* StoreSearchUITests.m */; };
 		8411C3551D3F5B72003FC684 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411C3531D3F5B72003FC684 /* SearchViewController.m */; };
 		8411C3561D3F5B72003FC684 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8411C3541D3F5B72003FC684 /* SearchViewController.xib */; };
+		84D3EEC51D404FBE00A59172 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */; };
+		84D3EEC81D4053F000A59172 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EEC71D4053F000A59172 /* SearchResultCell.m */; };
+		84D3EECA1D40581000A59172 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D3EEC91D40581000A59172 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,10 @@
 		8411C3521D3F5B72003FC684 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		8411C3531D3F5B72003FC684 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		8411C3541D3F5B72003FC684 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		84D3EEC61D4053F000A59172 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
+		84D3EEC71D4053F000A59172 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
+		84D3EEC91D40581000A59172 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +121,10 @@
 				8411C3541D3F5B72003FC684 /* SearchViewController.xib */,
 				84030FA41D3FBC5C00903C0E /* SearchResult.h */,
 				84030FA51D3FBC5C00903C0E /* SearchResult.m */,
+				84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */,
+				84D3EEC61D4053F000A59172 /* SearchResultCell.h */,
+				84D3EEC71D4053F000A59172 /* SearchResultCell.m */,
+				84D3EEC91D40581000A59172 /* NothingFoundCell.xib */,
 				8411C31F1D3F5A80003FC684 /* Supporting Files */,
 			);
 			path = StoreSearch;
@@ -253,6 +264,8 @@
 			files = (
 				8411C32F1D3F5A80003FC684 /* LaunchScreen.storyboard in Resources */,
 				8411C32C1D3F5A80003FC684 /* Assets.xcassets in Resources */,
+				84D3EEC51D404FBE00A59172 /* SearchResultCell.xib in Resources */,
+				84D3EECA1D40581000A59172 /* NothingFoundCell.xib in Resources */,
 				8411C3561D3F5B72003FC684 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +293,7 @@
 			files = (
 				8411C3241D3F5A80003FC684 /* AppDelegate.m in Sources */,
 				8411C3551D3F5B72003FC684 /* SearchViewController.m in Sources */,
+				84D3EEC81D4053F000A59172 /* SearchResultCell.m in Sources */,
 				84030FA61D3FBC5C00903C0E /* SearchResult.m in Sources */,
 				8411C3211D3F5A80003FC684 /* main.m in Sources */,
 			);
