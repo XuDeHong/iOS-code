@@ -100,69 +100,12 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     {
         SearchResultCell *cell = (SearchResultCell *)[tableView dequeueReusableCellWithIdentifier:SearchResultCellIdentifier forIndexPath:indexPath];
         SearchResult *searchResult = _searchResults[indexPath.row];
-        cell.nameLabel.text = searchResult.name;
-        
-        NSString *artistName = searchResult.artistName;
-        if(artistName == nil)
-        {
-            artistName = @"Unknown";
-        }
-        
-        NSString *kind = [self kindForDisplay:searchResult.kind];
-        cell.artistNameLabel.text = [NSString stringWithFormat:@"%@ (%@)",artistName,kind];
+        [cell configureForSearchResult:searchResult];
         return cell;
     }
 }
 
--(NSString *)kindForDisplay:(NSString *)kind
-{
-    if([kind isEqualToString:@"album"])
-    {
-        return @"Album";
-    }
-    else if([kind isEqualToString:@"audiobook"])
-    {
-        return @"Audio Book";
-    }
-    else if([kind isEqualToString:@"book"])
-    {
-        return @"Book";
-    }
-    else if([kind isEqualToString:@"ebook"])
-    {
-        return @"E-Book";
-    }
-    else if([kind isEqualToString:@"feature-movie"])
-    {
-        return @"Movie";
-    }
-    else if([kind isEqualToString:@"music-video"])
-    {
-        return @"Music Video";
-    }
-    else if([kind isEqualToString:@"podcast"])
-    {
-        return @"Podcast";
-    }
-    else if([kind isEqualToString:@"software"])
-    {
-        return @"App";
-    }
-    else if([kind isEqualToString:@"song"])
-    {
-        return @"Song";
-    }
-    else if([kind isEqualToString:@"tv-episode"])
-    {
-        return @"TV Episode";
-    }
-    else
-    {
-        return kind;
-    }
-    
-    
-}
+
 
 #pragma mark - UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -336,7 +279,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     
     NSString *escapedSearchText = [searchText stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@&limit=200&entity=%@",escapedSearchText,categoryName];
+    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@&limit=50&entity=%@",escapedSearchText,categoryName];
     NSURL *url = [NSURL URLWithString:urlString];
     return url;
 }
