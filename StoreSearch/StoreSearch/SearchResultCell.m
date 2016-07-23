@@ -33,7 +33,6 @@
     [self.artworkImageView cancelImageRequestOperation];
     self.nameLabel.text = nil;
     self.artistNameLabel.text = nil;
-    NSLog(@"Reuse");
 }
 
 -(void)configureForSearchResult:(SearchResult *)searchResult
