@@ -21,5 +21,6 @@
 @property (nonatomic,copy) NSString *genre;
 
 -(NSComparisonResult)compareName:(SearchResult *)other;
+-(NSString *)kindForDisplay;
 
 @end
