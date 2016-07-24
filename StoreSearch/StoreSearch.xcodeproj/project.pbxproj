@@ -18,6 +18,7 @@
 		8411C3451D3F5A80003FC684 /* StoreSearchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411C3441D3F5A80003FC684 /* StoreSearchUITests.m */; };
 		8411C3551D3F5B72003FC684 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411C3531D3F5B72003FC684 /* SearchViewController.m */; };
 		8411C3561D3F5B72003FC684 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8411C3541D3F5B72003FC684 /* SearchViewController.xib */; };
+		842B4F531D447C8000D38036 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B4F521D447C8000D38036 /* GradientView.m */; };
 		84CDA3DA1D41AED800B4B824 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CDA3D91D41AED800B4B824 /* LoadingCell.xib */; };
 		84D3EEC51D404FBE00A59172 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */; };
 		84D3EEC81D4053F000A59172 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EEC71D4053F000A59172 /* SearchResultCell.m */; };
@@ -68,6 +69,8 @@
 		8411C3521D3F5B72003FC684 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		8411C3531D3F5B72003FC684 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		8411C3541D3F5B72003FC684 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		842B4F511D447C8000D38036 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		842B4F521D447C8000D38036 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		84CDA3D91D41AED800B4B824 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		84D3EEC61D4053F000A59172 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				84EEDC2A1D43127100FDC022 /* DetailViewController.h */,
 				84EEDC2B1D43127100FDC022 /* DetailViewController.m */,
 				84EEDC2C1D43127100FDC022 /* DetailViewController.xib */,
+				842B4F511D447C8000D38036 /* GradientView.h */,
+				842B4F521D447C8000D38036 /* GradientView.m */,
 				8411C31F1D3F5A80003FC684 /* Supporting Files */,
 			);
 			path = StoreSearch;
@@ -480,6 +485,7 @@
 				84D3EEC81D4053F000A59172 /* SearchResultCell.m in Sources */,
 				84030FA61D3FBC5C00903C0E /* SearchResult.m in Sources */,
 				8411C3211D3F5A80003FC684 /* main.m in Sources */,
+				842B4F531D447C8000D38036 /* GradientView.m in Sources */,
 				84EEDC2D1D43127100FDC022 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
