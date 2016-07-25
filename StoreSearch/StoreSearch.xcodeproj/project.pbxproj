@@ -19,6 +19,8 @@
 		8411C3551D3F5B72003FC684 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411C3531D3F5B72003FC684 /* SearchViewController.m */; };
 		8411C3561D3F5B72003FC684 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8411C3541D3F5B72003FC684 /* SearchViewController.xib */; };
 		842B4F531D447C8000D38036 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B4F521D447C8000D38036 /* GradientView.m */; };
+		842B4F571D44AC7800D38036 /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B4F551D44AC7800D38036 /* LandscapeViewController.m */; };
+		842B4F581D44AC7800D38036 /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842B4F561D44AC7800D38036 /* LandscapeViewController.xib */; };
 		84CDA3DA1D41AED800B4B824 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CDA3D91D41AED800B4B824 /* LoadingCell.xib */; };
 		84D3EEC51D404FBE00A59172 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */; };
 		84D3EEC81D4053F000A59172 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EEC71D4053F000A59172 /* SearchResultCell.m */; };
@@ -71,6 +73,9 @@
 		8411C3541D3F5B72003FC684 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		842B4F511D447C8000D38036 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		842B4F521D447C8000D38036 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		842B4F541D44AC7800D38036 /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeViewController.h; sourceTree = "<group>"; };
+		842B4F551D44AC7800D38036 /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeViewController.m; sourceTree = "<group>"; };
+		842B4F561D44AC7800D38036 /* LandscapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandscapeViewController.xib; sourceTree = "<group>"; };
 		84CDA3D91D41AED800B4B824 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		84D3EEC61D4053F000A59172 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
@@ -158,6 +163,9 @@
 				84EEDC2C1D43127100FDC022 /* DetailViewController.xib */,
 				842B4F511D447C8000D38036 /* GradientView.h */,
 				842B4F521D447C8000D38036 /* GradientView.m */,
+				842B4F541D44AC7800D38036 /* LandscapeViewController.h */,
+				842B4F551D44AC7800D38036 /* LandscapeViewController.m */,
+				842B4F561D44AC7800D38036 /* LandscapeViewController.xib */,
 				8411C31F1D3F5A80003FC684 /* Supporting Files */,
 			);
 			path = StoreSearch;
@@ -327,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8411C32F1D3F5A80003FC684 /* LaunchScreen.storyboard in Resources */,
+				842B4F581D44AC7800D38036 /* LandscapeViewController.xib in Resources */,
 				8411C32C1D3F5A80003FC684 /* Assets.xcassets in Resources */,
 				84EEDC2E1D43127100FDC022 /* DetailViewController.xib in Resources */,
 				84CDA3DA1D41AED800B4B824 /* LoadingCell.xib in Resources */,
@@ -481,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8411C3241D3F5A80003FC684 /* AppDelegate.m in Sources */,
+				842B4F571D44AC7800D38036 /* LandscapeViewController.m in Sources */,
 				8411C3551D3F5B72003FC684 /* SearchViewController.m in Sources */,
 				84D3EEC81D4053F000A59172 /* SearchResultCell.m in Sources */,
 				84030FA61D3FBC5C00903C0E /* SearchResult.m in Sources */,

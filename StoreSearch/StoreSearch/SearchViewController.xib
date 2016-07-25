@@ -26,14 +26,14 @@
                         <outlet property="delegate" destination="-1" id="7yZ-Gh-Zd2"/>
                     </connections>
                 </tableView>
-                <searchBar contentMode="redraw" fixedFrame="YES" placeholder="App name, artist, song, album, ebook" translatesAutoresizingMaskIntoConstraints="NO" id="XdY-ZQ-PLD">
+                <searchBar contentMode="redraw" placeholder="App name, artist, song, album, ebook" translatesAutoresizingMaskIntoConstraints="NO" id="XdY-ZQ-PLD">
                     <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="2v8-gL-tZi"/>
                     </connections>
                 </searchBar>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIP-lp-Sxd">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIP-lp-Sxd">
                     <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                     <items>
                         <navigationItem id="Div-IE-9sY">
@@ -57,9 +57,15 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="XdY-ZQ-PLD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1i8-GG-JQf"/>
+                <constraint firstItem="EIP-lp-Sxd" firstAttribute="top" secondItem="XdY-ZQ-PLD" secondAttribute="bottom" id="2z7-4V-ZDg"/>
                 <constraint firstAttribute="bottom" secondItem="1cp-w4-lzB" secondAttribute="bottom" id="BQm-LC-hha"/>
                 <constraint firstItem="1cp-w4-lzB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JB9-Nu-A6T"/>
+                <constraint firstItem="XdY-ZQ-PLD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Q8H-Wr-x5H"/>
+                <constraint firstItem="EIP-lp-Sxd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YqZ-wa-t7O"/>
+                <constraint firstAttribute="trailing" secondItem="XdY-ZQ-PLD" secondAttribute="trailing" id="guR-dH-siS"/>
                 <constraint firstItem="1cp-w4-lzB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oOf-jA-qXX"/>
+                <constraint firstAttribute="trailing" secondItem="EIP-lp-Sxd" secondAttribute="trailing" id="rHO-a8-Zwn"/>
                 <constraint firstAttribute="trailing" secondItem="1cp-w4-lzB" secondAttribute="trailing" id="xG7-rf-7aI"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
