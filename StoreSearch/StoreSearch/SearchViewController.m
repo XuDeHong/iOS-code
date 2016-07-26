@@ -366,7 +366,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     
     NSString *escapedSearchText = [searchText stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@&limit=100&entity=%@",escapedSearchText,categoryName];
+    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@&limit=50&entity=%@",escapedSearchText,categoryName];
     NSURL *url = [NSURL URLWithString:urlString];
     return url;
 }

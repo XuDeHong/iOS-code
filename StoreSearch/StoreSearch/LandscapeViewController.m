@@ -8,6 +8,7 @@
 
 #import "LandscapeViewController.h"
 #import "SearchResult.h"
+#import <AFNetworking/UIButton+AFNetworking.h>
 
 @interface LandscapeViewController () <UIScrollViewDelegate>
 
@@ -77,10 +78,10 @@
     
     for(SearchResult *searchResult in self.searchResults)
     {
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-        button.backgroundColor = [UIColor whiteColor];
-        [button setTitle:[NSString stringWithFormat:@"%d",index] forState:UIControlStateNormal];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button setBackgroundImage:[UIImage imageNamed:@"LandscapeButton"] forState:UIControlStateNormal];
         button.frame = CGRectMake(x + marginHorz, 20.0f + row*itemHeight + marginVert, buttonWidth, buttonHeight);
+        [self downloadImageForSearchResult:searchResult andPlaceOnButton:button];
         [self.scrollView addSubview:button];
         
         index++;
@@ -116,6 +117,11 @@
 -(void)dealloc
 {
     NSLog(@"dealloc %@",self);
+    
+//    for(UIButton *button in self.scrollView.subviews)
+//    {
+//        [button cancelBackgroundImageRequestOperationForState:UIControlStateNormal];
+//    }
 }
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -141,7 +147,26 @@
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.scrollView.contentOffset = CGPointMake(self.scrollView.bounds.size.width * sender.currentPage, 0);
     } completion:nil];
+}
 
+-(void)downloadImageForSearchResult:(SearchResult *)searchResult andPlaceOnButton:(UIButton *)button
+{
+    NSURL *url = [NSURL URLWithString:searchResult.artworkURL60];
+    
+    //1
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
+    
+    //2
+    __weak UIButton *weakButton = button;
+    
+    //3
+    [button setImageForState:UIControlStateNormal withURLRequest:request placeholderImage:nil success:^(NSURLRequest *request,NSHTTPURLResponse *response,UIImage *image){
+        
+        //4
+        UIImage *unscaledImage = [UIImage imageWithCGImage:image.CGImage scale:1.0 orientation:image.imageOrientation];
+        [weakButton setImage:unscaledImage forState:UIControlStateNormal];
+    } failure:nil];
 }
 
 /*
