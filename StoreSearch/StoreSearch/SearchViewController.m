@@ -89,6 +89,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     if(_landscapeViewController == nil)
     {
         _landscapeViewController = [[LandscapeViewController alloc] initWithNibName:@"LandscapeViewController" bundle:nil];
+        _landscapeViewController.searchResults = _searchResults;
         _landscapeViewController.view.frame = self.view.bounds;
         _landscapeViewController.view.alpha = 0.0f;
         
@@ -365,7 +366,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     
     NSString *escapedSearchText = [searchText stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@&limit=50&entity=%@",escapedSearchText,categoryName];
+    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@&limit=100&entity=%@",escapedSearchText,categoryName];
     NSURL *url = [NSURL URLWithString:urlString];
     return url;
 }
