@@ -10,6 +10,7 @@
 #import "SearchResult.h"
 #import <AFNetworking/UIButton+AFNetworking.h>
 #import "Search.h"
+#import "DetailViewController.h"
 
 @interface LandscapeViewController () <UIScrollViewDelegate>
 
@@ -38,9 +39,68 @@
     if(_firstTime)
     {
         _firstTime = NO;
-        
+        if(self.search != nil)
+        {
+            if(self.search.isLoading)
+            {
+                [self showSpinner];
+            }
+            else if([self.search.searchResults count] == 0)
+            {
+                [self showNothingFoundLabel];
+            }
+            else
+            {
+                [self tileButtons];
+            }
+        }
+
+    }
+}
+
+-(void)showNothingFoundLabel
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.text = @"Nothing Found";
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor whiteColor];
+    
+    [label sizeToFit];
+    CGRect rect = label.frame;
+    rect.size.width = ceilf(rect.size.width/2.0f) * 2.0f;
+    rect.size.height = ceilf(rect.size.height/2.0f) * 2.0f;
+    label.frame = rect;
+    label.center = CGPointMake(CGRectGetMidX(self.scrollView.bounds), CGRectGetMidY(self.scrollView.bounds));
+    [self.view addSubview:label];
+    
+}
+
+-(void)searchResultsReceived
+{
+    [self hideSpinner];
+    if([self.search.searchResults count] == 0)
+    {
+        [self showNothingFoundLabel];
+    }
+    else
+    {
         [self tileButtons];
     }
+
+}
+
+-(void)hideSpinner
+{
+    [[self.view viewWithTag:1000] removeFromSuperview];
+}
+
+-(void)showSpinner
+{
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    spinner.center = CGPointMake(CGRectGetMidX(self.scrollView.bounds) + 0.5f, CGRectGetMidY(self.scrollView.bounds) + 0.5f);
+    spinner.tag = 1000;
+    [self.view addSubview:spinner];
+    [spinner startAnimating];
 }
 
 -(void)tileButtons
@@ -82,6 +142,8 @@
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setBackgroundImage:[UIImage imageNamed:@"LandscapeButton"] forState:UIControlStateNormal];
         button.frame = CGRectMake(x + marginHorz, 20.0f + row*itemHeight + marginVert, buttonWidth, buttonHeight);
+        button.tag = 2000 + index;
+        [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self downloadImageForSearchResult:searchResult andPlaceOnButton:button];
         [self.scrollView addSubview:button];
         
@@ -108,6 +170,14 @@
     NSLog(@"Number of pages: %d",numPages);
     self.pageControl.numberOfPages = numPages;
     self.pageControl.currentPage = 0;
+}
+
+-(void)buttonPressed:(UIButton *)sender
+{
+    DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    SearchResult *searchResult = self.search.searchResults[sender.tag - 2000];
+    controller.searchResult = searchResult;
+    [controller presentInParentViewController:self];
 }
 
 - (void)didReceiveMemoryWarning {
