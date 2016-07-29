@@ -15,7 +15,7 @@
     return [self.name localizedStandardCompare:other.name];
 }
 
--(NSString *)kindForDisplay
+-(NSString *)kindForDisplay 
 {
     if([self.kind isEqualToString:@"album"])
     {

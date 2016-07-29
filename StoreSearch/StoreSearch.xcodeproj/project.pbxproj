@@ -29,6 +29,7 @@
 		84A2CC531D4A50B500FD533C /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A2CC551D4A50B500FD533C /* LandscapeViewController.xib */; };
 		84D3EEC81D4053F000A59172 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EEC71D4053F000A59172 /* SearchResultCell.m */; };
 		84EEDC2D1D43127100FDC022 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDC2B1D43127100FDC022 /* DetailViewController.m */; };
+		84F767C01D4B5E0500D6F1FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84F767C21D4B5E0500D6F1FE /* InfoPlist.strings */; };
 		A89DFEC1EC3B25368D7950DC /* libPods-StoreSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E489F0A923D56F57BB32B /* libPods-StoreSearch.a */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +64,6 @@
 		8411C3231D3F5A80003FC684 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8411C32B1D3F5A80003FC684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8411C32E1D3F5A80003FC684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8411C3301D3F5A80003FC684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8411C3351D3F5A80003FC684 /* StoreSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8411C3391D3F5A80003FC684 /* StoreSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreSearchTests.m; sourceTree = "<group>"; };
 		8411C33B1D3F5A80003FC684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +94,9 @@
 		84D3EEC71D4053F000A59172 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
 		84EEDC2A1D43127100FDC022 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		84EEDC2B1D43127100FDC022 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		84F767BC1D4B5D8200D6F1FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F767C11D4B5E0500D6F1FE /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84F767C31D4B5E6F00D6F1FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		91849E73D3AD9B5D579071FB /* Pods-StoreSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreSearchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoreSearchTests/Pods-StoreSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B9F4CF30EC42FC046A3E430 /* Pods-StoreSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreSearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoreSearchUITests/Pods-StoreSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA99DE71087EE2F7E0EE50AC /* Pods-StoreSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoreSearchTests/Pods-StoreSearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,7 +160,8 @@
 				8411C3231D3F5A80003FC684 /* AppDelegate.m */,
 				8411C32B1D3F5A80003FC684 /* Assets.xcassets */,
 				8411C32D1D3F5A80003FC684 /* LaunchScreen.storyboard */,
-				8411C3301D3F5A80003FC684 /* Info.plist */,
+				84F767BC1D4B5D8200D6F1FE /* Info.plist */,
+				84F767C21D4B5E0500D6F1FE /* InfoPlist.strings */,
 				8411C3521D3F5B72003FC684 /* SearchViewController.h */,
 				8411C3531D3F5B72003FC684 /* SearchViewController.m */,
 				84A2CC481D4A4EE600FD533C /* SearchViewController.xib */,
@@ -356,6 +360,7 @@
 				84A2CC411D4A4DC300FD533C /* LoadingCell.xib in Resources */,
 				84A2CC501D4A50A500FD533C /* SearchResultCell.xib in Resources */,
 				84A2CC3C1D4A497700FD533C /* NothingFoundCell.xib in Resources */,
+				84F767C01D4B5E0500D6F1FE /* InfoPlist.strings in Resources */,
 				84A2CC461D4A4EE600FD533C /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,6 +620,15 @@
 				84A2CC541D4A50B500FD533C /* Base */,
 			);
 			name = LandscapeViewController.xib;
+			sourceTree = "<group>";
+		};
+		84F767C21D4B5E0500D6F1FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F767C11D4B5E0500D6F1FE /* nl */,
+				84F767C31D4B5E6F00D6F1FE /* Base */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
