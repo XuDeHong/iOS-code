@@ -59,7 +59,7 @@
     NSString *artistName = self.searchResult.artistName;
     if(artistName == nil)
     {
-        artistName = @"Unknown";
+        artistName = NSLocalizedString(@"Unknown",@"Localized kind:Unknown");
     }
     
     self.artistNameLabel.text = artistName;
@@ -73,7 +73,7 @@
     NSString *priceText;
     if([self.searchResult.price floatValue] == 0.0f)
     {
-        priceText = @"Free";
+        priceText = NSLocalizedString(@"Free",@"Localized kind:Free");
     }
     else
     {

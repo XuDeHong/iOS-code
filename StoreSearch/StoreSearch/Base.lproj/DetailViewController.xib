@@ -48,7 +48,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDk-4I-YWr">
-                            <rect key="frame" x="10" y="181" width="43" height="19"/>
+                            <rect key="frame" x="10" y="181" width="52" height="19"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                 <constraint firstItem="UyL-1e-tx9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IKr-RZ-YnL"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="400" y="453"/>
+            <point key="canvasLocation" x="429.5" y="455.5"/>
         </view>
     </objects>
     <resources>

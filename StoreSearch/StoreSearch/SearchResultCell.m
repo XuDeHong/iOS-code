@@ -42,11 +42,11 @@
     NSString *artistName = searchResult.artistName;
     if(artistName == nil)
     {
-        artistName = @"Unknown";
+        artistName = NSLocalizedString(@"Unknown",@"Localized kind:Unknown");
     }
     
     NSString *kind = [searchResult kindForDisplay];
-    self.artistNameLabel.text = [NSString stringWithFormat:@"%@ (%@)",artistName,kind];
+    self.artistNameLabel.text = [NSString stringWithFormat:NSLocalizedString(@"ARTIST_NAME_LABEL_FORMAT",@"Format for artist name label"),artistName,kind];
     [self.artworkImageView setImageWithURL:[NSURL URLWithString:searchResult.artworkURL60] placeholderImage:[UIImage imageNamed:@"Placeholder"]];
 }
 

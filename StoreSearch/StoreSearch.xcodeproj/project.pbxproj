@@ -17,17 +17,18 @@
 		8411C33A1D3F5A80003FC684 /* StoreSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411C3391D3F5A80003FC684 /* StoreSearchTests.m */; };
 		8411C3451D3F5A80003FC684 /* StoreSearchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411C3441D3F5A80003FC684 /* StoreSearchUITests.m */; };
 		8411C3551D3F5B72003FC684 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8411C3531D3F5B72003FC684 /* SearchViewController.m */; };
-		8411C3561D3F5B72003FC684 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8411C3541D3F5B72003FC684 /* SearchViewController.xib */; };
 		84149BA61D49FB0F003EA82D /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 84149BA51D49FB0F003EA82D /* Search.m */; };
+		841B29421D4AFCAA008984A8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 841B29401D4AFCAA008984A8 /* Localizable.strings */; };
 		842B4F531D447C8000D38036 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B4F521D447C8000D38036 /* GradientView.m */; };
 		842B4F571D44AC7800D38036 /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842B4F551D44AC7800D38036 /* LandscapeViewController.m */; };
-		842B4F581D44AC7800D38036 /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842B4F561D44AC7800D38036 /* LandscapeViewController.xib */; };
-		84CDA3DA1D41AED800B4B824 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CDA3D91D41AED800B4B824 /* LoadingCell.xib */; };
-		84D3EEC51D404FBE00A59172 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */; };
+		84A2CC3C1D4A497700FD533C /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A2CC3E1D4A497700FD533C /* NothingFoundCell.xib */; };
+		84A2CC411D4A4DC300FD533C /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A2CC431D4A4DC300FD533C /* LoadingCell.xib */; };
+		84A2CC461D4A4EE600FD533C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A2CC481D4A4EE600FD533C /* SearchViewController.xib */; };
+		84A2CC4B1D4A4F9800FD533C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A2CC4D1D4A4F9800FD533C /* DetailViewController.xib */; };
+		84A2CC501D4A50A500FD533C /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A2CC521D4A50A500FD533C /* SearchResultCell.xib */; };
+		84A2CC531D4A50B500FD533C /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A2CC551D4A50B500FD533C /* LandscapeViewController.xib */; };
 		84D3EEC81D4053F000A59172 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D3EEC71D4053F000A59172 /* SearchResultCell.m */; };
-		84D3EECA1D40581000A59172 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D3EEC91D40581000A59172 /* NothingFoundCell.xib */; };
 		84EEDC2D1D43127100FDC022 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EEDC2B1D43127100FDC022 /* DetailViewController.m */; };
-		84EEDC2E1D43127100FDC022 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EEDC2C1D43127100FDC022 /* DetailViewController.xib */; };
 		A89DFEC1EC3B25368D7950DC /* libPods-StoreSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7E489F0A923D56F57BB32B /* libPods-StoreSearch.a */; };
 /* End PBXBuildFile section */
 
@@ -71,22 +72,28 @@
 		8411C3461D3F5A80003FC684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8411C3521D3F5B72003FC684 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		8411C3531D3F5B72003FC684 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		8411C3541D3F5B72003FC684 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		84149BA41D49FB0F003EA82D /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
 		84149BA51D49FB0F003EA82D /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
+		841B29411D4AFCAA008984A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		841B29431D4AFD38008984A8 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		842B4F511D447C8000D38036 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		842B4F521D447C8000D38036 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		842B4F541D44AC7800D38036 /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeViewController.h; sourceTree = "<group>"; };
 		842B4F551D44AC7800D38036 /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeViewController.m; sourceTree = "<group>"; };
-		842B4F561D44AC7800D38036 /* LandscapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandscapeViewController.xib; sourceTree = "<group>"; };
-		84CDA3D91D41AED800B4B824 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
-		84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		84A2CC3D1D4A497700FD533C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
+		84A2CC401D4A4A7600FD533C /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
+		84A2CC421D4A4DC300FD533C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingCell.xib; sourceTree = "<group>"; };
+		84A2CC451D4A4DDC00FD533C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LoadingCell.strings; sourceTree = "<group>"; };
+		84A2CC471D4A4EE600FD533C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchViewController.xib; sourceTree = "<group>"; };
+		84A2CC4A1D4A4EE700FD533C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/SearchViewController.strings; sourceTree = "<group>"; };
+		84A2CC4C1D4A4F9800FD533C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/DetailViewController.xib; sourceTree = "<group>"; };
+		84A2CC4F1D4A4F9E00FD533C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/DetailViewController.strings; sourceTree = "<group>"; };
+		84A2CC511D4A50A500FD533C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
+		84A2CC541D4A50B500FD533C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LandscapeViewController.xib; sourceTree = "<group>"; };
 		84D3EEC61D4053F000A59172 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
 		84D3EEC71D4053F000A59172 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
-		84D3EEC91D40581000A59172 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		84EEDC2A1D43127100FDC022 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		84EEDC2B1D43127100FDC022 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		84EEDC2C1D43127100FDC022 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		91849E73D3AD9B5D579071FB /* Pods-StoreSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreSearchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoreSearchTests/Pods-StoreSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B9F4CF30EC42FC046A3E430 /* Pods-StoreSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreSearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoreSearchUITests/Pods-StoreSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CA99DE71087EE2F7E0EE50AC /* Pods-StoreSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoreSearchTests/Pods-StoreSearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,22 +160,22 @@
 				8411C3301D3F5A80003FC684 /* Info.plist */,
 				8411C3521D3F5B72003FC684 /* SearchViewController.h */,
 				8411C3531D3F5B72003FC684 /* SearchViewController.m */,
-				8411C3541D3F5B72003FC684 /* SearchViewController.xib */,
+				84A2CC481D4A4EE600FD533C /* SearchViewController.xib */,
 				84030FA41D3FBC5C00903C0E /* SearchResult.h */,
 				84030FA51D3FBC5C00903C0E /* SearchResult.m */,
-				84D3EEC41D404FBE00A59172 /* SearchResultCell.xib */,
+				84A2CC521D4A50A500FD533C /* SearchResultCell.xib */,
 				84D3EEC61D4053F000A59172 /* SearchResultCell.h */,
 				84D3EEC71D4053F000A59172 /* SearchResultCell.m */,
-				84D3EEC91D40581000A59172 /* NothingFoundCell.xib */,
-				84CDA3D91D41AED800B4B824 /* LoadingCell.xib */,
+				84A2CC3E1D4A497700FD533C /* NothingFoundCell.xib */,
+				84A2CC431D4A4DC300FD533C /* LoadingCell.xib */,
 				84EEDC2A1D43127100FDC022 /* DetailViewController.h */,
 				84EEDC2B1D43127100FDC022 /* DetailViewController.m */,
-				84EEDC2C1D43127100FDC022 /* DetailViewController.xib */,
+				84A2CC4D1D4A4F9800FD533C /* DetailViewController.xib */,
 				842B4F511D447C8000D38036 /* GradientView.h */,
 				842B4F521D447C8000D38036 /* GradientView.m */,
 				842B4F541D44AC7800D38036 /* LandscapeViewController.h */,
 				842B4F551D44AC7800D38036 /* LandscapeViewController.m */,
-				842B4F561D44AC7800D38036 /* LandscapeViewController.xib */,
+				84A2CC551D4A50B500FD533C /* LandscapeViewController.xib */,
 				84149BA41D49FB0F003EA82D /* Search.h */,
 				84149BA51D49FB0F003EA82D /* Search.m */,
 				8411C31F1D3F5A80003FC684 /* Supporting Files */,
@@ -179,6 +186,7 @@
 		8411C31F1D3F5A80003FC684 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				841B29401D4AFCAA008984A8 /* Localizable.strings */,
 				8411C3201D3F5A80003FC684 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -321,6 +329,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = 8411C3131D3F5A80003FC684;
 			productRefGroup = 8411C31D1D3F5A80003FC684 /* Products */;
@@ -340,13 +349,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8411C32F1D3F5A80003FC684 /* LaunchScreen.storyboard in Resources */,
-				842B4F581D44AC7800D38036 /* LandscapeViewController.xib in Resources */,
+				84A2CC531D4A50B500FD533C /* LandscapeViewController.xib in Resources */,
 				8411C32C1D3F5A80003FC684 /* Assets.xcassets in Resources */,
-				84EEDC2E1D43127100FDC022 /* DetailViewController.xib in Resources */,
-				84CDA3DA1D41AED800B4B824 /* LoadingCell.xib in Resources */,
-				84D3EEC51D404FBE00A59172 /* SearchResultCell.xib in Resources */,
-				84D3EECA1D40581000A59172 /* NothingFoundCell.xib in Resources */,
-				8411C3561D3F5B72003FC684 /* SearchViewController.xib in Resources */,
+				84A2CC4B1D4A4F9800FD533C /* DetailViewController.xib in Resources */,
+				841B29421D4AFCAA008984A8 /* Localizable.strings in Resources */,
+				84A2CC411D4A4DC300FD533C /* LoadingCell.xib in Resources */,
+				84A2CC501D4A50A500FD533C /* SearchResultCell.xib in Resources */,
+				84A2CC3C1D4A497700FD533C /* NothingFoundCell.xib in Resources */,
+				84A2CC461D4A4EE600FD533C /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +556,67 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		841B29401D4AFCAA008984A8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				841B29411D4AFCAA008984A8 /* Base */,
+				841B29431D4AFD38008984A8 /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		84A2CC3E1D4A497700FD533C /* NothingFoundCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A2CC3D1D4A497700FD533C /* Base */,
+				84A2CC401D4A4A7600FD533C /* nl */,
+			);
+			name = NothingFoundCell.xib;
+			sourceTree = "<group>";
+		};
+		84A2CC431D4A4DC300FD533C /* LoadingCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A2CC421D4A4DC300FD533C /* Base */,
+				84A2CC451D4A4DDC00FD533C /* nl */,
+			);
+			name = LoadingCell.xib;
+			sourceTree = "<group>";
+		};
+		84A2CC481D4A4EE600FD533C /* SearchViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A2CC471D4A4EE600FD533C /* Base */,
+				84A2CC4A1D4A4EE700FD533C /* nl */,
+			);
+			name = SearchViewController.xib;
+			sourceTree = "<group>";
+		};
+		84A2CC4D1D4A4F9800FD533C /* DetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A2CC4C1D4A4F9800FD533C /* Base */,
+				84A2CC4F1D4A4F9E00FD533C /* nl */,
+			);
+			name = DetailViewController.xib;
+			sourceTree = "<group>";
+		};
+		84A2CC521D4A50A500FD533C /* SearchResultCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A2CC511D4A50A500FD533C /* Base */,
+			);
+			name = SearchResultCell.xib;
+			sourceTree = "<group>";
+		};
+		84A2CC551D4A50B500FD533C /* LandscapeViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84A2CC541D4A50B500FD533C /* Base */,
+			);
+			name = LandscapeViewController.xib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -636,10 +707,17 @@
 			baseConfigurationReference = 4C3DBE706FCA22AB087A0C9C /* Pods-StoreSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				INFOPLIST_FILE = StoreSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = text.StoreSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 			};
 			name = Debug;
 		};
@@ -648,10 +726,17 @@
 			baseConfigurationReference = 0F61E40609D61E2D0B03D4C2 /* Pods-StoreSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				INFOPLIST_FILE = StoreSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = text.StoreSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 			};
 			name = Release;
 		};
