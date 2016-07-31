@@ -11,8 +11,10 @@
 #import "SearchResult.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "GradientView.h"
+#import "MenuViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface DetailViewController () <UIGestureRecognizerDelegate>
+@interface DetailViewController () <UIGestureRecognizerDelegate,MFMailComposeViewControllerDelegate>
 
 @property (nonatomic,weak) IBOutlet UIView *popupView;
 @property (nonatomic,weak) IBOutlet UIImageView *artworkImageView;
@@ -21,6 +23,11 @@
 @property (nonatomic,weak) IBOutlet UILabel *kindLabel;
 @property (nonatomic,weak) IBOutlet UILabel *genreLabel;
 @property (nonatomic,weak) IBOutlet UIButton *priceButton;
+@property (nonatomic,strong) UIPopoverController *masterPopverController;
+
+@property (weak, nonatomic) IBOutlet UIButton *closeButton;
+@property (nonatomic,strong) UIPopoverController *menuPopoverController;
+
 @end
 
 @implementation DetailViewController
@@ -36,21 +43,80 @@
     [self.priceButton setBackgroundImage:image forState:UIControlStateNormal];
     
     self.view.tintColor = [UIColor colorWithRed:20/255.0f green:160/255.0f blue:160/255.0f alpha:1.0f];
-    self.view.backgroundColor = [UIColor clearColor];
     
     self.popupView.layer.cornerRadius = 10.0f;
     
-    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close:)];
-    gestureRecognizer.cancelsTouchesInView = NO;
-    gestureRecognizer.delegate = self;
-    [self.view addGestureRecognizer:gestureRecognizer];
-    
-    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LandscapeBackground"]];
+        self.popupView.hidden = (self.searchResult == nil);
+        self.title = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(menuButtonPressed:)];
+    }
+    else
+    {
+        UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(close:)];
+        gestureRecognizer.cancelsTouchesInView = NO;
+        gestureRecognizer.delegate = self;
+        [self.view addGestureRecognizer:gestureRecognizer];
+        self.view.backgroundColor = [UIColor clearColor];
+    }
     if(self.searchResult != nil)
     {
         [self updateUI];
     }
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)sendSupportEmail
+{
+    [self.menuPopoverController dismissPopoverAnimated:YES];
+    MFMailComposeViewController *controller = [[MFMailComposeViewController alloc] init];
+    
+    if(controller != nil)
+    {
+        [controller setSubject:NSLocalizedString(@"Support Request", @"Email subject")];
+        [controller setToRecipients:@[@"740665370@qq.com"]];
+        controller.mailComposeDelegate = self;
+        controller.modalPresentationStyle = UIModalPresentationFormSheet;
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
+
+-(void)menuButtonPressed:(UIBarButtonItem *)sender
+{
+    if([self.menuPopoverController isPopoverVisible])
+    {
+        [self.menuPopoverController dismissPopoverAnimated:YES];
+    }
+    else
+    {
+        [self.menuPopoverController presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
+}
+
+-(UIPopoverController *)menuPopoverController
+{
+    if(_menuPopoverController == nil)
+    {
+        MenuViewController *menuViewController = [[MenuViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        menuViewController.detailViewController = self;
+        _menuPopoverController = [[UIPopoverController alloc] initWithContentViewController:menuViewController];
+    }
+    return _menuPopoverController;
+}
+
+-(void)setSearchResult:(SearchResult *)newSearchResult
+{
+    if(_searchResult != newSearchResult)
+    {
+        _searchResult = newSearchResult;
+        
+        if([self isViewLoaded])
+        {
+            [self updateUI];
+        }
+    }
 }
 
 -(void)updateUI
@@ -82,6 +148,24 @@
     [self.priceButton setTitle:priceText forState:UIControlStateNormal];
     
     [self.artworkImageView setImageWithURL:[NSURL URLWithString:self.searchResult.artworkURL100]];
+    
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        CAKeyframeAnimation *bounceAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+        bounceAnimation.duration = 0.4;
+        bounceAnimation.delegate = self;
+        
+        bounceAnimation.values = @[@0.7,@1.2,@0.9,@1.0];
+        bounceAnimation.keyTimes = @[@0.0,@0.334,@0.666,@1.0];
+        
+        bounceAnimation.timingFunctions = @[
+                                            [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+                                            [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
+                                            [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+        [self.popupView.layer addAnimation:bounceAnimation forKey:@"bounceAnimation"];
+        self.popupView.hidden = NO;
+        [self.masterPopverController dismissPopoverAnimated:YES];
+    }
 }
 
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
@@ -171,6 +255,35 @@
     [self.artworkImageView cancelImageRequestOperation];
 }
 
+#pragma mark - UISplitViewControllerDelegate
+
+-(void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc
+{
+    barButtonItem.title = NSLocalizedString(@"Search", @"Split-view master button");
+    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
+    self.masterPopverController = pc;
+}
+
+-(void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+    self.masterPopverController = nil;
+}
+
+-(void)splitViewController:(UISplitViewController *)splitViewController popoverController:(nonnull UIPopoverController *)pc willPresentViewController:(nonnull UIViewController *)aViewController
+{
+    if([self.menuPopoverController isPopoverVisible])
+    {
+        [self.menuPopoverController dismissPopoverAnimated:YES];
+    }
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 /*
 #pragma mark - Navigation

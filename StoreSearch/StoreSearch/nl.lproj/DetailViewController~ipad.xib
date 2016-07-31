@@ -9,7 +9,6 @@
             <connections>
                 <outlet property="artistNameLabel" destination="Pa0-rm-EdW" id="UBe-fL-y19"/>
                 <outlet property="artworkImageView" destination="l8g-TT-kCP" id="kIg-l2-Uqb"/>
-                <outlet property="closeButton" destination="czB-Wr-v4v" id="fjX-ZJ-m9b"/>
                 <outlet property="genreLabel" destination="mnD-G6-tz6" id="YPh-gO-y9E"/>
                 <outlet property="kindLabel" destination="XLl-Ip-P8X" id="0xt-WK-qUJ"/>
                 <outlet property="nameLabel" destination="qYZ-BG-xp2" id="aK3-zd-g4u"/>
@@ -20,60 +19,47 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyL-1e-tx9" userLabel="Popup View">
-                    <rect key="frame" x="67" y="204" width="240" height="260"/>
+                    <rect key="frame" x="134" y="262" width="500" height="500"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czB-Wr-v4v" userLabel="Close Button">
-                            <rect key="frame" x="3" y="0.0" width="15" height="22"/>
-                            <state key="normal" image="CloseButton"/>
-                            <connections>
-                                <action selector="close:" destination="-1" eventType="touchUpInside" id="FeU-dt-QXc"/>
-                            </connections>
-                        </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l8g-TT-kCP">
-                            <rect key="frame" x="70" y="9" width="100" height="100"/>
+                            <rect key="frame" x="200" y="19" width="100" height="100"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="qYZ-BG-xp2">
-                            <rect key="frame" x="10" y="110" width="220" height="48"/>
+                            <rect key="frame" x="45" y="197" width="220" height="48"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pa0-rm-EdW">
-                            <rect key="frame" x="10" y="158" width="220" height="19"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDk-4I-YWr">
-                            <rect key="frame" x="10" y="181" width="52" height="19"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soort:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDk-4I-YWr">
+                            <rect key="frame" x="45" y="316" width="52" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kind Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLl-Ip-P8X">
-                            <rect key="frame" x="70" y="181" width="160" height="19"/>
+                            <rect key="frame" x="116" y="314" width="160" height="19"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxf-cf-dyB">
-                            <rect key="frame" x="10" y="204" width="52" height="19"/>
+                            <rect key="frame" x="45" y="359" width="52" height="19"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genre Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnD-G6-tz6">
-                            <rect key="frame" x="70" y="204" width="160" height="19"/>
+                            <rect key="frame" x="116" y="359" width="160" height="19"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HML-Bo-Zeg">
-                            <rect key="frame" x="165" y="230" width="69" height="24"/>
+                            <rect key="frame" x="410" y="459" width="69" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="YXM-az-K3G"/>
                             </constraints>
@@ -84,13 +70,19 @@
                                 <action selector="openInStore:" destination="-1" eventType="touchUpInside" id="QZu-Vt-OYH"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pa0-rm-EdW">
+                            <rect key="frame" x="45" y="274" width="220" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="0.94520474137931032" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="260" id="HiN-b3-wCR"/>
-                        <constraint firstAttribute="trailing" secondItem="HML-Bo-Zeg" secondAttribute="trailing" constant="6" id="JQ6-CU-HzP"/>
-                        <constraint firstAttribute="width" constant="240" id="ciw-z7-2iI"/>
-                        <constraint firstAttribute="bottom" secondItem="HML-Bo-Zeg" secondAttribute="bottom" constant="6" id="eMc-78-UgL"/>
+                        <constraint firstAttribute="height" constant="500" id="HiN-b3-wCR"/>
+                        <constraint firstAttribute="trailing" secondItem="HML-Bo-Zeg" secondAttribute="trailing" constant="21" id="JQ6-CU-HzP"/>
+                        <constraint firstAttribute="width" constant="500" id="ciw-z7-2iI"/>
+                        <constraint firstAttribute="bottom" secondItem="HML-Bo-Zeg" secondAttribute="bottom" constant="17" id="eMc-78-UgL"/>
                     </constraints>
                 </view>
             </subviews>
@@ -99,11 +91,9 @@
                 <constraint firstItem="UyL-1e-tx9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="02t-a2-cvY"/>
                 <constraint firstItem="UyL-1e-tx9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IKr-RZ-YnL"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="429.5" y="455.5"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="278.5" y="435.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="CloseButton" width="15" height="15"/>
-    </resources>
 </document>

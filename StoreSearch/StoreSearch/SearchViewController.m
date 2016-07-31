@@ -30,7 +30,6 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 {
     LandscapeViewController *_landscapeViewController;
     UIStatusBarStyle _statusBarStyle;
-    __weak DetailViewController *_detailViewController;
     Search *_search;
 }
 
@@ -49,7 +48,11 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     [self.tableView registerNib:cellNib forCellReuseIdentifier:LoadingCellIdentifier];
     
     self.tableView.rowHeight = 80;
-    [self.searchBar becomeFirstResponder];
+    if(UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad)
+    {
+        [self.searchBar becomeFirstResponder];
+    }
+
     _statusBarStyle = UIStatusBarStyleDefault;
     // Do any additional setup after loading the view from its nib.
 }
@@ -64,13 +67,16 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 {
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
     
-    if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+    if(UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad)
     {
-        [self hideLandscapeViewWithDuration:duration];
-    }
-    else
-    {
-        [self showLandscapeViewWithDuration:duration];
+        if(UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+        {
+            [self hideLandscapeViewWithDuration:duration];
+        }
+        else
+        {
+            [self showLandscapeViewWithDuration:duration];
+        }
     }
 }
 
@@ -95,7 +101,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
         }];
         
         [self.searchBar resignFirstResponder];
-        [_detailViewController dismissFromParentViewControllerWithAnimationType:DetailViewControllerAnimationTypeFade];
+        [self.detailViewController dismissFromParentViewControllerWithAnimationType:DetailViewControllerAnimationTypeFade];
 
     }
 }
@@ -180,14 +186,20 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.searchBar resignFirstResponder];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     SearchResult *searchResult = _search.searchResults[indexPath.row];
-    controller.searchResult = searchResult;
-    
-    [controller presentInParentViewController:self];
-    _detailViewController = controller;
+    if(UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad)
+    {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        DetailViewController *controller = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+        controller.searchResult = searchResult;
+        
+        [controller presentInParentViewController:self];
+        self.detailViewController = controller;
+    }
+    else
+    {
+        self.detailViewController.searchResult = searchResult;
+    }
 }
 
 -(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
