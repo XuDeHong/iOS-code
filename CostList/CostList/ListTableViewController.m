@@ -30,21 +30,26 @@ static NSString *ListCellIdentifier = @"ListCell";
     //设置TabBar的tintColor
     self.tabBarController.tabBar.tintColor = self.view.tintColor;
     
-    //设置NavigationBar完全透明
+    //设置NavigationBar完全透明，通过UIBarMetricsCompact设置横屏可见，竖屏不可见来间接达到效果，而该应用APP只能竖屏
     [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBarColor"] forBarMetrics:UIBarMetricsCompact];
     
     //设置NavigationBarItem的颜色
     self.navigationBar.tintColor = [UIColor whiteColor];
     
-    //去除NavigationBar的横线
-    if ([self.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]){
+    //去除NavigationBar下部的横线
+    if ([self.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
+    {
         NSArray *list=self.navigationBar.subviews;
-        for (id obj in list) {
-            if ([obj isKindOfClass:[UIImageView class]]) {
+        for (id obj in list)
+        {
+            if ([obj isKindOfClass:[UIImageView class]])
+            {
                 UIImageView *imageView=(UIImageView *)obj;
                 NSArray *list2=imageView.subviews;
-                for (id obj2 in list2) {
-                    if ([obj2 isKindOfClass:[UIImageView class]]) {
+                for (id obj2 in list2)
+                {
+                    if ([obj2 isKindOfClass:[UIImageView class]])
+                    {
                         UIImageView *imageView2=(UIImageView *)obj2;
                         imageView2.hidden=YES;
                     }
