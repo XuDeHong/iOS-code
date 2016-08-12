@@ -37,7 +37,7 @@
         //创建中间“+”按钮
         UIButton *addBtn = [[UIButton alloc] init];
         //设置默认背景图片
-        [addBtn setBackgroundImage:[UIImage imageNamed:@"AddButtonIcon"] forState:UIControlStateNormal];
+        [addBtn setBackgroundImage:[UIImage imageNamed:@"AddButtonIcon-Inactive"] forState:UIControlStateNormal];
         //设置按下时背景图片
         [addBtn setBackgroundImage:[UIImage imageNamed:@"AddButtonIcon-Active"] forState:UIControlStateHighlighted];
         //添加响应事件
@@ -81,7 +81,7 @@
     
     //创建并设置“+”按钮下方的文本为“添加”
     UILabel *addLbl = [[UILabel alloc] init];
-    addLbl.text = @"添加";
+    addLbl.text = NSLocalizedString(@"添加", @"添加");
     addLbl.font = [UIFont systemFontOfSize:10];
     addLbl.textColor = [UIColor grayColor];
     [addLbl sizeToFit];

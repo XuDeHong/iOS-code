@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "ChartIcon - Active.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Notes Icon - Inactive@2x.png",
+      "filename" : "ChartIcon - Active@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "ChartIcon - Active@3x.png",
       "scale" : "3x"
     }
   ],
