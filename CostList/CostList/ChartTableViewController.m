@@ -10,25 +10,31 @@
 
 @interface ChartTableViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *upBackgroundView; //指向界面上部的视图，用于设置背景色
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 @end
 
 @implementation ChartTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self customizeAppearence]; //设置UI元素
+
 }
 
 -(void)customizeAppearence
 {
     //设置TabBar的tintColor
-    self.tabBarController.tabBar.tintColor = self.view.tintColor;
+    self.tabBarController.tabBar.tintColor = GlobalTintColor;
+    
+    //设置界面上部的View的背景色
+    self.upBackgroundView.backgroundColor = GlobalTintColor;
     
     //设置NavigationBar完全透明，通过UIBarMetricsCompact设置横屏可见，竖屏不可见来间接达到效果，而该应用APP只能竖屏
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBarColor"] forBarMetrics:UIBarMetricsCompact];
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBarBackground"] forBarMetrics:UIBarMetricsCompact];
     
     //设置NavigationBarItem的颜色
     self.navigationBar.tintColor = [UIColor whiteColor];

@@ -37,9 +37,9 @@
         //创建中间“+”按钮
         UIButton *addBtn = [[UIButton alloc] init];
         //设置默认背景图片
-        [addBtn setBackgroundImage:[UIImage imageNamed:@"AddButtonIcon-Inactive"] forState:UIControlStateNormal];
+        [addBtn setBackgroundImage:[UIImage imageNamed:@"AddButtonIcon-Inactive(blue)"] forState:UIControlStateNormal];
         //设置按下时背景图片
-        [addBtn setBackgroundImage:[UIImage imageNamed:@"AddButtonIcon-Active"] forState:UIControlStateHighlighted];
+        [addBtn setBackgroundImage:[UIImage imageNamed:@"AddButtonIcon-Active(blue)"] forState:UIControlStateHighlighted];
         //添加响应事件
         [addBtn addTarget:self action:@selector(addBtnDidClick) forControlEvents:UIControlEventTouchUpInside];
         //将按钮添加到TabBar

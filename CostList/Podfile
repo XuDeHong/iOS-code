@@ -1,5 +1,3 @@
-platform :ios, '7.0'
 
 target "CostList" do
-pod 'TYAlertController', '~>1.1.6'
 end

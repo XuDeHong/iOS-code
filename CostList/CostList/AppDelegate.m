@@ -24,14 +24,14 @@
     UITabBar *tabBar = tabBarController.tabBar;
     
     //设置TabBar上第一个Item（明细）选中时的图片
-    UIImage *listActive = [UIImage imageNamed:@"ListIcon - Active"];
+    UIImage *listActive = [UIImage imageNamed:@"ListIcon - Active(blue)"];
     UITabBarItem *listItem = tabBar.items[0];
     //始终按照原图片渲染
     listItem.selectedImage = [listActive imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     
     //设置TabBar上第二个Item（报表）选中时的图片
-    UIImage *chartActive = [UIImage imageNamed:@"ChartIcon - Active"];
+    UIImage *chartActive = [UIImage imageNamed:@"ChartIcon - Active(blue)"];
     UITabBarItem *chartItem = tabBar.items[1];
     //始终按照原图片渲染
     chartItem.selectedImage = [chartActive imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

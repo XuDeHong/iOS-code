@@ -16,9 +16,12 @@
 		84068DF31D580F39003B6F5E /* CostListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84068DF21D580F39003B6F5E /* CostListUITests.m */; };
 		84068E021D58130E003B6F5E /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84068E011D58130E003B6F5E /* ListTableViewController.m */; };
 		84068E051D58135D003B6F5E /* ChartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84068E041D58135D003B6F5E /* ChartTableViewController.m */; };
+		843084D91D5D9B8E0091F0BC /* MonthPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843084D81D5D9B8E0091F0BC /* MonthPickerViewController.xib */; };
+		843084E01D5DA3F70091F0BC /* MonthPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843084DE1D5DA3F70091F0BC /* MonthPickerViewController.m */; };
 		8487858C1D58C96800A2EBFB /* MyTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487858B1D58C96800A2EBFB /* MyTabBar.m */; };
 		848785941D58D25100A2EBFB /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 848785931D58D25100A2EBFB /* UIView+Category.m */; };
 		84B7CB1C1D58C56E0062A48D /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B7CB1B1D58C56E0062A48D /* MyTabBarController.m */; };
+		917F2AB0EAE47E48DC89AD02 /* libPods-CostList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D34A4823120E7210FD7336B3 /* libPods-CostList.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,12 +60,19 @@
 		84068E011D58130E003B6F5E /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		84068E031D58135D003B6F5E /* ChartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartTableViewController.h; sourceTree = "<group>"; };
 		84068E041D58135D003B6F5E /* ChartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartTableViewController.m; sourceTree = "<group>"; };
+		843084D81D5D9B8E0091F0BC /* MonthPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthPickerViewController.xib; sourceTree = "<group>"; };
+		843084DD1D5DA3F70091F0BC /* MonthPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthPickerViewController.h; sourceTree = "<group>"; };
+		843084DE1D5DA3F70091F0BC /* MonthPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthPickerViewController.m; sourceTree = "<group>"; };
+		8464BC871D5DCB4C00774350 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8487858A1D58C96800A2EBFB /* MyTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBar.h; sourceTree = "<group>"; };
 		8487858B1D58C96800A2EBFB /* MyTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBar.m; sourceTree = "<group>"; };
 		848785921D58D25100A2EBFB /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
 		848785931D58D25100A2EBFB /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		84B7CB1A1D58C56E0062A48D /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
 		84B7CB1B1D58C56E0062A48D /* MyTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarController.m; sourceTree = "<group>"; };
+		8B2B7D10C1730534FB6BFDF4 /* Pods-CostList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CostList.release.xcconfig"; path = "Pods/Target Support Files/Pods-CostList/Pods-CostList.release.xcconfig"; sourceTree = "<group>"; };
+		D34A4823120E7210FD7336B3 /* libPods-CostList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CostList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30EC2DCAC117C66385B7AEF /* Pods-CostList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CostList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CostList/Pods-CostList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917F2AB0EAE47E48DC89AD02 /* libPods-CostList.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +101,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F303C33CF2DB10816556399 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F30EC2DCAC117C66385B7AEF /* Pods-CostList.debug.xcconfig */,
+				8B2B7D10C1730534FB6BFDF4 /* Pods-CostList.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		721F5C4A0BD21BA6C7ACCB9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D34A4823120E7210FD7336B3 /* libPods-CostList.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84068DBE1D580F39003B6F5E = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +125,8 @@
 				84068DE61D580F39003B6F5E /* CostListTests */,
 				84068DF11D580F39003B6F5E /* CostListUITests */,
 				84068DC81D580F39003B6F5E /* Products */,
+				1F303C33CF2DB10816556399 /* Pods */,
+				721F5C4A0BD21BA6C7ACCB9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +145,7 @@
 			children = (
 				84068DCD1D580F39003B6F5E /* AppDelegate.h */,
 				84068DCE1D580F39003B6F5E /* AppDelegate.m */,
+				8464BC891D5DCB6F00774350 /* Tool */,
 				848785891D58C7F100A2EBFB /* Controller */,
 				8487858D1D58C97100A2EBFB /* View */,
 				848785911D58D14900A2EBFB /* Category */,
@@ -153,6 +184,14 @@
 			path = CostListUITests;
 			sourceTree = "<group>";
 		};
+		8464BC891D5DCB6F00774350 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				8464BC871D5DCB4C00774350 /* PrefixHeader.pch */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
 		848785891D58C7F100A2EBFB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +201,9 @@
 				84068E011D58130E003B6F5E /* ListTableViewController.m */,
 				84068E031D58135D003B6F5E /* ChartTableViewController.h */,
 				84068E041D58135D003B6F5E /* ChartTableViewController.m */,
+				843084DD1D5DA3F70091F0BC /* MonthPickerViewController.h */,
+				843084DE1D5DA3F70091F0BC /* MonthPickerViewController.m */,
+				843084D81D5D9B8E0091F0BC /* MonthPickerViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -191,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84068DF71D580F39003B6F5E /* Build configuration list for PBXNativeTarget "CostList" */;
 			buildPhases = (
+				9202554401E42D2C17147E54 /* [CP] Check Pods Manifest.lock */,
 				84068DC31D580F39003B6F5E /* Sources */,
 				84068DC41D580F39003B6F5E /* Frameworks */,
 				84068DC51D580F39003B6F5E /* Resources */,
+				E99D78D33F35B4678D8C2B85 /* [CP] Embed Pods Frameworks */,
+				74556255F540F80B3222EC8F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,6 +338,7 @@
 				84068DDD1D580F39003B6F5E /* LaunchScreen.storyboard in Resources */,
 				84068DDA1D580F39003B6F5E /* Assets.xcassets in Resources */,
 				84068DD81D580F39003B6F5E /* Main.storyboard in Resources */,
+				843084D91D5D9B8E0091F0BC /* MonthPickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +358,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74556255F540F80B3222EC8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CostList/Pods-CostList-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9202554401E42D2C17147E54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E99D78D33F35B4678D8C2B85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CostList/Pods-CostList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84068DC31D580F39003B6F5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -320,6 +414,7 @@
 				84068DCF1D580F39003B6F5E /* AppDelegate.m in Sources */,
 				848785941D58D25100A2EBFB /* UIView+Category.m in Sources */,
 				8487858C1D58C96800A2EBFB /* MyTabBar.m in Sources */,
+				843084E01D5DA3F70091F0BC /* MonthPickerViewController.m in Sources */,
 				84068DCC1D580F39003B6F5E /* main.m in Sources */,
 				84068E051D58135D003B6F5E /* ChartTableViewController.m in Sources */,
 				84B7CB1C1D58C56E0062A48D /* MyTabBarController.m in Sources */,
@@ -462,8 +557,11 @@
 		};
 		84068DF81D580F39003B6F5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F30EC2DCAC117C66385B7AEF /* Pods-CostList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CostList/PrefixHeader.pch;
 				INFOPLIST_FILE = CostList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.XuDeHong.CostList;
@@ -473,8 +571,11 @@
 		};
 		84068DF91D580F39003B6F5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B2B7D10C1730534FB6BFDF4 /* Pods-CostList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CostList/PrefixHeader.pch;
 				INFOPLIST_FILE = CostList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.XuDeHong.CostList;
