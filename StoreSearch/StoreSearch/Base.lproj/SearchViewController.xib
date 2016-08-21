@@ -39,7 +39,7 @@
                         <navigationItem id="Div-IE-9sY">
                             <nil key="title"/>
                             <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="LEW-j6-Mie">
-                                <rect key="frame" x="38" y="7" width="300" height="30"/>
+                                <rect key="frame" x="37.5" y="7" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="All"/>
